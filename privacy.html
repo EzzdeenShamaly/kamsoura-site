@@ -61,6 +61,7 @@
     (<strong>Claude من شركة Anthropic</strong>) ليتعرّف على الأكلة. <strong>لا نحفظ الصورة</strong>
     لا على الخادم ولا في التخزين، ونحذف نسختها المؤقتة من هاتفك. نحفظ فقط اسم الأكلة التي تعرّف
     عليها النموذج وعدد الكلمات المستهلكة وتكلفتها، لحساب حصة الاستعمال.
+    وقبل أن تغادر الصورة هاتفك، نحذف منها موقع التصوير وكل بياناتها الوصفية (EXIF)، ونُبقي فقط اتجاهها.
     تحذف Anthropic مدخلات ومخرجات الواجهة البرمجية تلقائيًا خلال 30 يومًا، ولا تستعملها لتدريب
     نماذجها افتراضيًا
     (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-commercial-api-data" rel="noopener">سياسة Anthropic</a>).
@@ -71,6 +72,10 @@
     عندما تسأل المدرب، يُرسل سؤالك مع ملخص يومك (هدفك، وما أكلته اليوم بأسماء الأكلات وسعراتها،
     وهدف الوزن، ووضع رمضان) إلى نموذج Claude نفسه. <strong>لا نحفظ المحادثة</strong> لا على هاتفك
     ولا على خادمنا. نحفظ فقط عدد الكلمات والتكلفة والوقت، لحساب حصة الأسئلة.
+  </p>
+  <p>
+    إن بلّغت عن جواب من أجوبة المدرب، نحفظ الجواب والسؤال الذي سبقه وسبب البلاغ لنراجعه ونحسّن المدرب.
+    هذا هو الجزء الوحيد من المحادثة الذي يُحفظ، ولا يُحفظ إلا بطلبك. يُحذف مع حسابك، وتجده في ملف «نزّل بياناتي».
   </p>
 
   <h3>الموقع (وضع رمضان فقط)</h3>
@@ -175,6 +180,8 @@
       A photo is sent over HTTPS to our server and from there to an AI model
       (<strong>Claude, by Anthropic</strong>) to recognise the dish. <strong>We do not store the
       photo</strong>. We keep only the recognised dish and the usage cost, for the quota.
+      Before a photo leaves your phone, its location and all other metadata (EXIF) are removed;
+      only its orientation is kept.
       Anthropic deletes API inputs and outputs within 30 days by default and does not use them
       for training by default
       (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-commercial-api-data" rel="noopener">Anthropic's policy</a>).
@@ -185,6 +192,11 @@
       A question to the coach is sent with a summary of your day (target, today's meals with
       their calories, weight goal, Ramadan mode) to the same model. <strong>The conversation is
       not stored</strong> on your phone or our server; we keep only token counts, cost and time.
+    </p>
+    <p>
+      If you report a coach answer, we keep that answer, the question before it and your reason,
+      to review it and improve the coach. This is the only part of a conversation ever stored,
+      and only when you ask. It is deleted with your account and included in "Download my data".
     </p>
 
     <h3>Location (Ramadan mode only)</h3>
