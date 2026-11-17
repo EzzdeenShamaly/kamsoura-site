@@ -23,7 +23,7 @@
     <ul>
       <li>حسابك بلا اسم ولا بريد ولا رقم هاتف.</li>
       <li>نحفظ أهدافك ووجباتك ووزنك فقط لنحسب سعراتك.</li>
-      <li>صور الصحون ومحادثات المدرب لا نحفظها، إلا جوابًا تبلّغ عنه أنت.</li>
+      <li>صور الصحون ومحادثات المدرب وما تكتبه عن أكلك لا نحفظها، إلا جوابًا تبلّغ عنه أنت.</li>
       <li>موقعك التقريبي يبقى على هاتفك.</li>
       <li>لا إعلانات، ولا نبيع بياناتك.</li>
       <li>تستطيع تنزيل بياناتك أو حذفها كلها من الإعدادات في أي وقت.</li>
@@ -71,6 +71,14 @@
     (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-commercial-api-data" rel="noopener">سياسة Anthropic</a>).
   </p>
 
+  <h3>كتابة ما أكلت</h3>
+  <p>
+    عندما تكتب ما أكلته بكلماتك (أو تقوله بمايك لوحة المفاتيح)، تُرسل الجملة بشكل مشفّر إلى خادمنا،
+    ومنه إلى نموذج Claude نفسه، ليختار الأكلات من قائمتنا مع كمية كل واحدة. <strong>لا نحفظ الجملة</strong>،
+    ولا أسماء الأكلات التي لم يجدها في القائمة. نحفظ فقط الأكلات التي اختارها من القائمة وعدد الكلمات
+    المستهلكة وتكلفتها، لحساب حصة الاستعمال. السعرات يحسبها التطبيق من قائمتنا، لا النموذج.
+  </p>
+
   <h3>المدرب</h3>
   <p>
     عندما تسأل المدرب، يُرسل سؤالك وآخر رسائل المحادثة مع ملخص يومك (هدفك اليومي من السعرات، وما
@@ -103,7 +111,7 @@
   <p>لا نبيع بياناتك ولا نشاركها لأغراض إعلانية. نستعمل مزوّدي خدمة يعالجونها نيابة عنا فقط:</p>
   <ul>
     <li><strong>Supabase:</strong> استضافة قاعدة البيانات وحسابك.</li>
-    <li><strong>Anthropic:</strong> التعرّف على الأكلة من الصورة، وأجوبة المدرب.</li>
+    <li><strong>Anthropic:</strong> التعرّف على الأكلة من الصورة، وفهم ما تكتبه عن أكلك، وأجوبة المدرب.</li>
     <li><strong>Sentry:</strong> تقارير الأعطال.</li>
   </ul>
   <p>قد تتم هذه المعالجة على خوادم خارج بلدك، منها الولايات المتحدة.</p>
@@ -113,7 +121,7 @@
     <li>بياناتك على خادمنا تبقى ما دام حسابك موجودًا، وتُحذف كلها عند حذف الحساب.</li>
     <li>قد تبقى نسخة منها في النسخ الاحتياطية التلقائية للخادم مدة لا تزيد على 30 يومًا، ثم تُحذف.</li>
     <li>تقارير الأعطال تُحذف تلقائيًا خلال 90 يومًا على الأكثر.</li>
-    <li>نحتفظ بمجموع يومي لكل التطبيق: عدد طلبات الصور والمدرب وتكلفتها، بلا أي ربط بحساب. نستعمله لنضع سقفًا للإنفاق.</li>
+    <li>نحتفظ بمجموع يومي لكل التطبيق: عدد طلبات الصور والكتابة والمدرب وتكلفتها، بلا أي ربط بحساب. نستعمله لنضع سقفًا للإنفاق.</li>
   </ul>
   <p>
     إن حذفت التطبيق من هاتفك دون أن تحذف حسابك، تبقى بياناتك مرتبطة برقم مجهول لا نعرف صاحبه.
@@ -198,6 +206,16 @@
       (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-commercial-api-data" rel="noopener">Anthropic's policy</a>).
     </p>
 
+    <h3>Typing what you ate</h3>
+    <p>
+      When you type what you ate in your own words (or say it with the keyboard's mic), the
+      sentence is sent over HTTPS to our server and from there to the same model, which picks
+      the dishes from our list with an amount for each. <strong>We do not store the
+      sentence</strong>, nor the names of foods it could not find in the list. We keep only the
+      dishes it picked from the list and the usage cost, for the quota. The app computes the
+      calories from our list, not the model.
+    </p>
+
     <h3>Coach</h3>
     <p>
       A question to the coach is sent with the latest messages of the conversation and a
@@ -229,7 +247,8 @@
     <p>
       We do not sell your data or share it for advertising. Service providers process it on our
       behalf only: <strong>Supabase</strong> (database and account hosting),
-      <strong>Anthropic</strong> (dish recognition and coach answers) and <strong>Sentry</strong>
+      <strong>Anthropic</strong> (dish recognition, understanding what you type, and coach
+      answers) and <strong>Sentry</strong>
       (crash reports). Processing may happen outside your country, including in the United States.
     </p>
 
@@ -238,7 +257,7 @@
       <li>Your data is kept while your account exists and is deleted with it.</li>
       <li>Copies may remain in automatic server backups for up to 30 days.</li>
       <li>Crash reports are deleted automatically within 90 days at most.</li>
-      <li>We keep a daily total for the whole app (photo and coach requests and their cost),
+      <li>We keep a daily total for the whole app (photo, typing and coach requests and their cost),
         linked to no account, to cap spending.</li>
     </ul>
     <p>If you uninstall the app without deleting your account, the data stays linked to an
